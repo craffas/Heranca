@@ -1,16 +1,13 @@
-#Calsse funcionário
+#Inicio do Programa
 from Pessoa import Pessoa
-
+#Criando Classe Funcionario:
 class Funcionario(Pessoa):
-    #Método Construtor da Classe filha
-    def __init__(self, nome, cpf, idade, matricula, salario, setor):
-        #Atributos
-        super().__init__(nome, cpf, idade)
+    def __init__(self, nome, cpf, rg, idade, matricula, salario, setor):
+        #Atributos da Classe:
+        super().__init__(nome, cpf, rg, idade)
         self.matricula = matricula
         self.salario = salario
         self.setor = setor
-
-    #Sobreescrever metodo STR da Classe Pessoa
+        #Método construtor
     def __str__(self):
-        return f'\n{super().__str__()}\nMatricula: {self.matricula}\nSalário: {self.salario}\nSetor: {self.setor}'
-
+        return f'{super().__str__()}\nMatricula: {self.matricula}\nSalário: {self.salario}\nSetor: {self.setor}'

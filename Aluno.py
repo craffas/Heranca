@@ -1,15 +1,14 @@
-#Calsse funcionário
+#Inicio do programa.
 from Pessoa import Pessoa
-
+#Criando Classe Aluno:
 class Aluno(Pessoa):
-    #Método Construtor da Classe filha
-    def __init__(self, nome, cpf, idade, ra, nota, curso):
-        #Atributos
-        super().__init__(nome, cpf, idade)
+    def __init__(self, nome, cpf, rg, idade, ra, curso, nota):
+        #Atributos da Classe:
+        super().__init__(nome, cpf, rg, idade)
         self.ra = ra
-        self.nota = nota
         self.curso = curso
-
-    #Sobreescrever metodo STR da Classe Pessoa
+        self.nota = nota
+    #Método Construtor:
     def __str__(self):
-        return f'\n{super().__str__()}\nRA: {self.ra}\nNota: {self.nota}\nCurso: {self.curso}'
+        return f'{super().__str__()}\nRA: {self.ra}\nCurso: {self.curso}\nNota: {self.nota}'
+
